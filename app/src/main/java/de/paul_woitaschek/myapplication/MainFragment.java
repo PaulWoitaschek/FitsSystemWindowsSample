@@ -27,7 +27,7 @@ public class MainFragment extends Fragment {
       AppCompatActivity host = (AppCompatActivity) getActivity();
       host.setSupportActionBar(toolbar);
 
-      view.findViewById(R.id.fab)
+      view.findViewById(R.id.details)
             .setOnClickListener(new View.OnClickListener() {
                @Override public void onClick(View v) {
                   getFragmentManager()
