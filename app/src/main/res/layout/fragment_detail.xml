@@ -3,13 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/coord"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbarLayout"
-        android:fitsSystemWindows="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/holo_green_dark">

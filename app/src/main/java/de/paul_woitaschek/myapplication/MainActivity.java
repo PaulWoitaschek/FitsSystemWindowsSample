@@ -1,5 +1,6 @@
 package de.paul_woitaschek.myapplication;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity
       implements NavigationView.OnNavigationItemSelectedListener {
@@ -26,6 +28,11 @@ public class MainActivity extends AppCompatActivity
          getSupportFragmentManager().beginTransaction()
                .replace(R.id.fragmentContainer, new MainFragment(), "mainfragment")
                .commit();
+      }
+
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+         int fullscreenFlags = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) ? View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN : 0;
+         getWindow().getDecorView().setSystemUiVisibility(fullscreenFlags);
       }
    }
 
